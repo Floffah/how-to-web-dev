@@ -57,10 +57,9 @@ export async function buildFileTree() {
                 const pagedata = {
                     name: nkebabToName(pages[ip]),
                     path: `/tutorials/${levels[il]}/${categories[ic]}/${pages[ip]}`,
-                    link: `/${levels[il]}/${categories[ic]}/${pages[ip].replace(
-                        /.md$/,
-                        "",
-                    )}`,
+                    link: `/view/${levels[il]}/${categories[ic]}/${pages[
+                        ip
+                    ].replace(/.md$/, "")}`,
                 } as PageData;
 
                 categorydata.pages.push(pagedata);

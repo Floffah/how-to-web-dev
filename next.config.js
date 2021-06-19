@@ -1,7 +1,7 @@
 module.exports = {
     reactStrictMode: true,
+    webpack5: true,
     future: {
         modern: true,
-        webpack5: true,
     },
-}
+};
