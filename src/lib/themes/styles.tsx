@@ -19,7 +19,7 @@ export const GlobalStyles = createGlobalStyle<ThemeProps<Theme>>`
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   }
 
-  p, span {
+  p, span, ul, ol {
     color: ${(props) => props.theme.front};
   }
 

@@ -1,14 +1,8 @@
 import { readdirSync } from "fs";
 import { resolve } from "path";
+import { nkebabToName } from "./naming";
 
-export const nkebabToName = (str: string) =>
-    str
-        .replace(/^[0-9]+-/, "")
-        .replace(/.md$/, "")
-        .replace(/-/g, " ")
-        .replace(/(?:^|\s)\S/g, (s) => s.toUpperCase());
-
-export async function buildFileTree() {
+export function buildFileTree() {
     // data of public/tutorials
     const data = {
         indexes: {} as { [k: string]: number },
@@ -60,6 +54,11 @@ export async function buildFileTree() {
                     link: `/view/${levels[il]}/${categories[ic]}/${pages[
                         ip
                     ].replace(/.md$/, "")}`,
+                    parts: {
+                        level: levels[il],
+                        category: categories[ic],
+                        page: pages[ip],
+                    },
                 } as PageData;
 
                 categorydata.pages.push(pagedata);
@@ -95,4 +94,9 @@ export interface PageData {
     name: string;
     path: string;
     link: string;
+    parts: {
+        level: string;
+        category: string;
+        page: string;
+    };
 }

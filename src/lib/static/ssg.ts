@@ -1,14 +1,14 @@
 import { GetStaticProps, GetStaticPropsContext } from "next";
-import { buildFileTree } from "./read";
+import { filetree } from "./cached";
 
-export async function defaultStaticProps(_ctx: GetStaticPropsContext) {
+export function defaultStaticProps(_ctx: GetStaticPropsContext) {
     return {
-        pagedata: await buildFileTree(),
+        pagedata: filetree,
     };
 }
 
 export const defaultSSG: GetStaticProps = async (ctx) => ({
     props: {
-        ...(await defaultStaticProps(ctx)),
+        ...defaultStaticProps(ctx),
     },
 });

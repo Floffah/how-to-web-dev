@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { defaultSSG } from "../lib/static/ssg";
 import { IndexDescription, IndexHeader } from "../styles/IndexPage.styles";
 import { FileTree } from "../lib/static/read";
-import TutorialList from "../components/display/TutorialList";
+import TutorialList from "../components/display/TutorialList/TutorialList";
 
 const IndexPage: FC<{ pagedata: FileTree }> = (p) => {
     return (

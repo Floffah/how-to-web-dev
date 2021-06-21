@@ -6,9 +6,9 @@ import {
     TutorialListLevelContentContainer,
     TutorialListPageContainer,
 } from "./TutorialList.styles";
-import { StyledIcon } from "../util/StyledIcon";
+import { StyledIcon } from "../../util/StyledIcon";
 import { mdiChevronDown, mdiChevronUp, mdiLink } from "@mdi/js";
-import { CategoryData, LevelData } from "../../lib/static/read";
+import { CategoryData, LevelData } from "../../../lib/static/read";
 import { useRouter } from "next/router";
 
 export const TutorialListLevel: FC<{ level: LevelData }> = (p) => {
@@ -30,7 +30,7 @@ export const TutorialListLevel: FC<{ level: LevelData }> = (p) => {
     return (
         <>
             <TutorialListLevelContainer onClick={() => setExpanded(!expanded)}>
-                <StyledIcon path={expanded ? mdiChevronUp : mdiChevronDown} />
+                <StyledIcon path={expanded ? mdiChevronDown : mdiChevronUp} />
                 <h2>{p.level.name}</h2>
             </TutorialListLevelContainer>
             <TutorialListLevelContentContainer>
@@ -70,7 +70,7 @@ export const TutorialListCategory: FC<{ category: CategoryData }> = (p) => {
             <TutorialListCategoryContainer
                 onClick={() => setExpanded(!expanded)}
             >
-                <StyledIcon path={expanded ? mdiChevronUp : mdiChevronDown} />
+                <StyledIcon path={expanded ? mdiChevronDown : mdiChevronUp} />
                 <h3>{p.category.name}</h3>
             </TutorialListCategoryContainer>
             <TutorialListCategoryContentContainer>

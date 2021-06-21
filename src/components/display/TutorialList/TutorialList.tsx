@@ -1,5 +1,5 @@
 import React, { FC, ReactNode, useMemo } from "react";
-import { FileTree } from "../../lib/static/read";
+import { FileTree } from "../../../lib/static/read";
 import { TutorialListContainer } from "./TutorialList.styles";
 import { TutorialListLevel } from "./TutorialList.utils";
 

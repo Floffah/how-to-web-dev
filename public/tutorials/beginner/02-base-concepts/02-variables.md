@@ -4,7 +4,7 @@ Variables are one of the most common features used in JavaScript.
 
 There are 3 different types of variables I will mention: `var`, `let`, `const`.
 
-The syntax of declaring a variable is usually `type name = value` and updating a <!-- WORD(mutable) -->[mutable](../../reference/glossary.md#mutable)<!-- WORD:END --> variable is just `name = value`
+The syntax of declaring a variable is usually `type name = value` and updating a mutable variable is just `name = value`
 
 ## `var`
 
@@ -82,7 +82,7 @@ You should always avoid using `var`. Use `const` anywhere that you **will not** 
 
 ## Variable "hoisting"
 
-Variable hoisting is a thing every major JavaScript implementation has. It is when a <!-- WORD(mutable) -->[mutable](../../reference/glossary.md#mutable)<!-- WORD:END --> or <!-- WORD(immutable) -->[immutable](../../reference/glossary.md#immutable)<!-- WORD:END --> variable is declared after it is queried.
+Variable hoisting is a thing every major JavaScript implementation has. It is when a mutable or immutable variable is declared after it is queried.
 
 An example of this is the following (example from [w3schools.com](https://www.w3schools.com/js/js_hoisting.asp))
 

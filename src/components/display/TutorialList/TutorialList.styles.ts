@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { StyledIcon } from "../util/StyledIcon";
+import { StyledIcon } from "../../util/StyledIcon";
 
 export const TutorialListContainer = styled.div`
     padding: 0 10px;
