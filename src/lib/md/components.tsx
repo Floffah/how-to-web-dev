@@ -1,15 +1,7 @@
 import React from "react";
 import { Components } from "react-markdown/src/ast-to-react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import {
-    nord,
-    pojoaque,
-    vscDarkPlus,
-    darcula,
-    dracula,
-    ghcolors,
-    duotoneSpace,
-} from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export const MarkdownComponents: Components = {
     code(p) {
